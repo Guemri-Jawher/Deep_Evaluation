@@ -1,0 +1,94 @@
+{
+  "suite": "deepeval-rag",
+  "dataset_version": "v1",
+  "created_at": "2026-10-26T21:12:23+00:00",
+  "config": {
+    "split": "dev",
+    "judge": "judge",
+    "threshold": 0.7
+  },
+  "n": 5,
+  "metrics": {
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r002",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r003",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r004",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r005",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Google AI Studio', 'is_byok': False, 'provider_error_code': '429', 'limit_source': 'upstream_provider_shared_pool', 'remedy_hint': 'Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing'}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    }
+  ]
+}

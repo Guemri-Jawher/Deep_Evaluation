@@ -1,0 +1,94 @@
+{
+  "suite": "deepeval-rag",
+  "dataset_version": "v1",
+  "created_at": "2026-10-26T21:14:35+00:00",
+  "config": {
+    "split": "dev",
+    "judge": "judge",
+    "threshold": 0.7
+  },
+  "n": 5,
+  "metrics": {
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "ValueError: no JSON object in judge output: 'The user wants me to extract factual, undisputed truths from the provided text. The text appears to be from a guide about LLM applications, eval gates, feedback flywheels, agentic patterns, etc. I nee'",
+      "trace_id": null
+    },
+    {
+      "case_id": "r002",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "ValueError: no JSON object in judge output: '{\\n  \"truths\": [\\n    \"The baseline evaluation process involves running the current system on a fixed dataset and recording the score.\",\\n    \"The change step modifies one thing such as prompt, model, re'",
+      "trace_id": null
+    },
+    {
+      "case_id": "r003",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "ValueError: no JSON object in judge output: 'The user wants me to extract factual truths from the provided text. The text appears to be from an evaluation guide for AI systems. I need to identify coherent, factual statements that can be inferred'",
+      "trace_id": null
+    },
+    {
+      "case_id": "r004",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "ValueError: no JSON object in judge output: 'The user wants me to extract factual, undisputed truths from the provided text. The text appears to be from a guide about evaluation metrics and agentic patterns. I need to extract coherent truths tha'",
+      "trace_id": null
+    },
+    {
+      "case_id": "r005",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "ValueError: no JSON object in judge output: 'The user wants me to extract factual, undisputed truths from the provided text. The text appears to be from an evaluation guide for LLM systems. I need to read carefully and extract statements that ar'",
+      "trace_id": null
+    }
+  ]
+}

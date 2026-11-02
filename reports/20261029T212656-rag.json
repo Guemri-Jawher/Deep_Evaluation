@@ -1,0 +1,201 @@
+{
+  "suite": "rag",
+  "dataset_version": "v1",
+  "created_at": "2026-10-29T21:26:56+00:00",
+  "config": {
+    "strategy": "hybrid",
+    "k": 5,
+    "judges": true,
+    "split": null
+  },
+  "n": 1,
+  "metrics": {
+    "answer_relevance": {
+      "name": "answer_relevance",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    "citation_validity": {
+      "name": "citation_validity",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    "context_relevance": {
+      "name": "context_relevance",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "correctness": {
+      "name": "correctness",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "faithfulness": {
+      "name": "faithfulness",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    "has_citation": {
+      "name": "has_citation",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    "hit@1": {
+      "name": "hit@1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "hit@3": {
+      "name": "hit@3",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "hit@5": {
+      "name": "hit@5",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "mrr": {
+      "name": "mrr",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "ndcg@5": {
+      "name": "ndcg@5",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "precision@5": {
+      "name": "precision@5",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "recall@1": {
+      "name": "recall@1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "recall@3": {
+      "name": "recall@3",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "recall@5": {
+      "name": "recall@5",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    "token_f1": {
+      "name": "token_f1",
+      "mean": 0.04761904761904762,
+      "ci_low": 0.04761904761904762,
+      "ci_high": 0.04761904761904762,
+      "n": 1
+    },
+    "latency_p50_s": {
+      "name": "latency_p50_s",
+      "mean": 66.4544995999895,
+      "ci_low": 66.4544995999895,
+      "ci_high": 66.4544995999895,
+      "n": 1
+    },
+    "latency_p95_s": {
+      "name": "latency_p95_s",
+      "mean": 66.4544995999895,
+      "ci_low": 66.4544995999895,
+      "ci_high": 66.4544995999895,
+      "n": 1
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.04761904761904762,
+        "mrr": 0.0,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_relevance": 0.0,
+        "correctness": 0.0
+      },
+      "passed": false,
+      "details": {
+        "answer": "Production traces surface real failures [eval-guide:p33:c0]. Those failures become new cases in your eval set [eval-guide:p33:c0]. The eval set grows more representative of reality [eval-guide:p33:c0]. The eval gate catches more regressions [eval-guide:p33:c0].",
+        "retrieved": [
+          "eval-guide:p33:c0",
+          "agentic-patterns:p45:c0",
+          "agentic-patterns:p7:c1",
+          "agentic-patterns:p46:c0",
+          "agentic-patterns:p7:c2"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "All factual claims in the answer are directly quoted from the context, so each claim is fully supported. No unsupported or contradictory statements are present. Therefore the answer receives the maximum score.",
+        "answer_relevance_reason": "The answer lists four distinct actions—surface failures, add them to the eval set, grow the eval set’s representativeness, and catch regressions—matching the requested four steps of the eval‑driven development loop. No extra or missing content is present.",
+        "context_relevance_reason": "The question asks for the four steps of the eval‑driven development loop. The provided context discusses eval gates, feedback flywheels, and general agent patterns, but it does not enumerate or describe a four‑step process for eval‑driven development. Therefore the context is unrelated to the specif",
+        "correctness_reason": "The answer does not mention the four steps Baseline, Change, Measure, Decide described in the reference. Instead it talks about production traces, failures, eval set growth, and eval gate, which are unrelated to the eval‑driven development loop. Therefore the answer is incorrect.",
+        "failure": "retrieval: evidence missing from top-5 (fix chunking, embeddings or retriever)"
+      },
+      "latency_s": 66.4544995999895,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    }
+  ]
+}

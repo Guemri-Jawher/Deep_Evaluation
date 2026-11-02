@@ -1,0 +1,1773 @@
+{
+  "suite": "retrieval-hybrid",
+  "dataset_version": "v1",
+  "created_at": "2026-10-25T21:11:44+00:00",
+  "config": {
+    "strategy": "hybrid",
+    "split": null,
+    "k": 10,
+    "chunks": 194
+  },
+  "n": 49,
+  "metrics": {
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 49
+    },
+    "hit@1": {
+      "name": "hit@1",
+      "mean": 0.7142857142857143,
+      "ci_low": 0.5714285714285714,
+      "ci_high": 0.8367346938775511,
+      "n": 49
+    },
+    "hit@10": {
+      "name": "hit@10",
+      "mean": 0.9387755102040817,
+      "ci_low": 0.8571428571428571,
+      "ci_high": 1.0,
+      "n": 49
+    },
+    "hit@3": {
+      "name": "hit@3",
+      "mean": 0.8775510204081632,
+      "ci_low": 0.7755102040816326,
+      "ci_high": 0.9591836734693877,
+      "n": 49
+    },
+    "hit@5": {
+      "name": "hit@5",
+      "mean": 0.8979591836734694,
+      "ci_low": 0.7959183673469388,
+      "ci_high": 0.9795918367346939,
+      "n": 49
+    },
+    "mrr": {
+      "name": "mrr",
+      "mean": 0.7976190476190477,
+      "ci_low": 0.697278911564626,
+      "ci_high": 0.8860544217687074,
+      "n": 49
+    },
+    "ndcg@5": {
+      "name": "ndcg@5",
+      "mean": 0.7778480283277182,
+      "ci_low": 0.6807541656339159,
+      "ci_high": 0.8628713517254011,
+      "n": 49
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.8775510204081632,
+      "ci_low": 0.7755102040816326,
+      "ci_high": 0.9591836734693877,
+      "n": 49
+    },
+    "precision@5": {
+      "name": "precision@5",
+      "mean": 0.21224489795918364,
+      "ci_low": 0.1836734693877551,
+      "ci_high": 0.24489795918367346,
+      "n": 49
+    },
+    "recall@1": {
+      "name": "recall@1",
+      "mean": 0.6836734693877551,
+      "ci_low": 0.5510204081632653,
+      "ci_high": 0.8061224489795918,
+      "n": 49
+    },
+    "recall@10": {
+      "name": "recall@10",
+      "mean": 0.9387755102040817,
+      "ci_low": 0.8571428571428571,
+      "ci_high": 1.0,
+      "n": 49
+    },
+    "recall@3": {
+      "name": "recall@3",
+      "mean": 0.8673469387755102,
+      "ci_low": 0.7653061224489796,
+      "ci_high": 0.9591836734693877,
+      "n": 49
+    },
+    "recall@5": {
+      "name": "recall@5",
+      "mean": 0.8877551020408163,
+      "ci_low": 0.7959183673469388,
+      "ci_high": 0.9693877551020408,
+      "n": 49
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.16666666666666666,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "eval-guide:p33:c0",
+          "agentic-patterns:p45:c0",
+          "agentic-patterns:p7:c1",
+          "agentic-patterns:p46:c0",
+          "agentic-patterns:p7:c2"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r002",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6131471927654584
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p6:c1",
+          "eval-guide:p35:c0",
+          "agentic-patterns:p15:c2",
+          "eval-guide:p34:c0",
+          "eval-guide:p9:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r003",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p7:c1",
+          "eval-guide:p7:c0",
+          "eval-guide:p36:c1",
+          "eval-guide:p38:c0",
+          "eval-guide:p27:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r004",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p8:c0",
+          "eval-guide:p20:c0",
+          "agentic-patterns:p26:c1",
+          "eval-guide:p24:c0",
+          "agentic-patterns:p13:c2"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r005",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p9:c1",
+          "eval-guide:p2:c2",
+          "eval-guide:p34:c0",
+          "eval-guide:p4:c0",
+          "eval-guide:p35:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r006",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6131471927654584
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p12:c0",
+          "agentic-patterns:p41:c2",
+          "eval-guide:p13:c0",
+          "agentic-patterns:p27:c1",
+          "eval-guide:p7:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r007",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p12:c1",
+          "eval-guide:p12:c0",
+          "eval-guide:p21:c0",
+          "eval-guide:p20:c1",
+          "agentic-patterns:p27:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r008",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p15:c0",
+          "eval-guide:p16:c0",
+          "eval-guide:p17:c0",
+          "agentic-patterns:p37:c1",
+          "eval-guide:p14:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r009",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p15:c1",
+          "eval-guide:p14:c0",
+          "eval-guide:p15:c0",
+          "agentic-patterns:p37:c1",
+          "eval-guide:p16:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r010",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p16:c0",
+          "eval-guide:p16:c1",
+          "eval-guide:p17:c0",
+          "agentic-patterns:p37:c1",
+          "eval-guide:p38:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r011",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p17:c0",
+          "agentic-patterns:p37:c1",
+          "eval-guide:p38:c1",
+          "eval-guide:p15:c0",
+          "eval-guide:p14:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r012",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p19:c1",
+          "eval-guide:p19:c0",
+          "agentic-patterns:p27:c0",
+          "eval-guide:p21:c0",
+          "eval-guide:p18:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r013",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p19:c1",
+          "eval-guide:p21:c1",
+          "eval-guide:p19:c0",
+          "eval-guide:p18:c0",
+          "eval-guide:p20:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r014",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.5,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p19:c1",
+          "eval-guide:p20:c0",
+          "eval-guide:p19:c0",
+          "eval-guide:p21:c1",
+          "agentic-patterns:p38:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r015",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p21:c0",
+          "eval-guide:p18:c0",
+          "eval-guide:p21:c1",
+          "eval-guide:p38:c1",
+          "agentic-patterns:p27:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r016",
+      "suite": "retrieval-hybrid",
+      "category": "diagnosis",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p21:c0",
+          "eval-guide:p19:c0",
+          "agentic-patterns:p27:c0",
+          "eval-guide:p21:c1",
+          "agentic-patterns:p27:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r017",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.5,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p38:c1",
+          "eval-guide:p21:c1",
+          "eval-guide:p21:c0",
+          "eval-guide:p19:c0",
+          "eval-guide:p4:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r018",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p23:c0",
+          "agentic-patterns:p36:c0",
+          "agentic-patterns:p37:c0",
+          "eval-guide:p23:c1",
+          "eval-guide:p24:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r019",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.25,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.43067655807339306
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p23:c1",
+          "eval-guide:p23:c0",
+          "eval-guide:p39:c0",
+          "eval-guide:p24:c0",
+          "agentic-patterns:p47:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r020",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p24:c1",
+          "agentic-patterns:p19:c3",
+          "agentic-patterns:p8:c1",
+          "agentic-patterns:p7:c2",
+          "agentic-patterns:p13:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r021",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 0.9197207891481876
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p27:c0",
+          "eval-guide:p26:c0",
+          "eval-guide:p27:c1",
+          "eval-guide:p13:c0",
+          "eval-guide:p28:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r022",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.5,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p34:c0",
+          "eval-guide:p36:c0",
+          "eval-guide:p35:c0",
+          "eval-guide:p36:c1",
+          "eval-guide:p38:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r023",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.5,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p42:c2",
+          "eval-guide:p32:c0",
+          "eval-guide:p4:c0",
+          "eval-guide:p22:c0",
+          "eval-guide:p30:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r024",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p33:c0",
+          "eval-guide:p38:c1",
+          "eval-guide:p35:c0",
+          "eval-guide:p31:c0",
+          "eval-guide:p2:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r025",
+      "suite": "retrieval-hybrid",
+      "category": "numeric",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p9:c0",
+          "eval-guide:p15:c1",
+          "eval-guide:p19:c1",
+          "agentic-patterns:p37:c1",
+          "eval-guide:p16:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r026",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p32:c0",
+          "eval-guide:p28:c1",
+          "agentic-patterns:p43:c0",
+          "agentic-patterns:p4:c1",
+          "eval-guide:p28:c2"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r027",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p33:c0",
+          "eval-guide:p7:c1",
+          "eval-guide:p10:c0",
+          "agentic-patterns:p5:c0",
+          "eval-guide:p14:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r028",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p28:c1",
+          "eval-guide:p27:c1",
+          "agentic-patterns:p33:c0",
+          "eval-guide:p13:c0",
+          "eval-guide:p6:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r029",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.0,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "hit@10": 0.0,
+        "recall@10": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p46:c1",
+          "agentic-patterns:p5:c1",
+          "agentic-patterns:p7:c2",
+          "agentic-patterns:p2:c0",
+          "agentic-patterns:p6:c0"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r030",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6131471927654584
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p6:c0",
+          "agentic-patterns:p3:c0",
+          "agentic-patterns:p2:c1",
+          "agentic-patterns:p24:c0",
+          "agentic-patterns:p19:c2"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r031",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.3333333333333333,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.5
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p4:c2",
+          "agentic-patterns:p4:c1",
+          "agentic-patterns:p7:c2",
+          "agentic-patterns:p20:c0",
+          "agentic-patterns:p47:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r032",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.0,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "hit@10": 0.0,
+        "recall@10": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p12:c1",
+          "agentic-patterns:p46:c2",
+          "agentic-patterns:p9:c0",
+          "agentic-patterns:p7:c2",
+          "eval-guide:p23:c1"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r033",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 0.8503449055347546
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p11:c0",
+          "agentic-patterns:p12:c1",
+          "agentic-patterns:p46:c2",
+          "agentic-patterns:p7:c1",
+          "agentic-patterns:p11:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r034",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.0,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "hit@10": 0.0,
+        "recall@10": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p46:c2",
+          "agentic-patterns:p15:c2",
+          "agentic-patterns:p14:c0",
+          "agentic-patterns:p7:c2",
+          "agentic-patterns:p23:c0"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r035",
+      "suite": "retrieval-hybrid",
+      "category": "numeric",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.16666666666666666,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p16:c1",
+          "agentic-patterns:p44:c1",
+          "agentic-patterns:p17:c1",
+          "agentic-patterns:p16:c0",
+          "agentic-patterns:p16:c2"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r036",
+      "suite": "retrieval-hybrid",
+      "category": "numeric",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p20:c0",
+          "agentic-patterns:p28:c1",
+          "agentic-patterns:p33:c1",
+          "agentic-patterns:p23:c2",
+          "agentic-patterns:p24:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r037",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.5,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p6:c2",
+          "agentic-patterns:p26:c0",
+          "agentic-patterns:p25:c0",
+          "agentic-patterns:p6:c0",
+          "agentic-patterns:p34:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r038",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "mrr": 0.3333333333333333,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.5
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p3:c3",
+          "eval-guide:p35:c0",
+          "agentic-patterns:p37:c0",
+          "agentic-patterns:p39:c1",
+          "agentic-patterns:p3:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r039",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p38:c0",
+          "agentic-patterns:p46:c1",
+          "eval-guide:p9:c0",
+          "eval-guide:p15:c0",
+          "agentic-patterns:p19:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r040",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p41:c2",
+          "agentic-patterns:p48:c0",
+          "eval-guide:p22:c0",
+          "agentic-patterns:p47:c0",
+          "agentic-patterns:p45:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r041",
+      "suite": "retrieval-hybrid",
+      "category": "numeric",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.6,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p44:c0",
+          "agentic-patterns:p44:c1",
+          "agentic-patterns:p45:c0",
+          "agentic-patterns:p25:c0",
+          "agentic-patterns:p4:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r042",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p42:c2",
+          "agentic-patterns:p4:c1",
+          "agentic-patterns:p40:c0",
+          "agentic-patterns:p35:c0",
+          "agentic-patterns:p3:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r043",
+      "suite": "retrieval-hybrid",
+      "category": "explanation",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p17:c2",
+          "agentic-patterns:p26:c0",
+          "eval-guide:p2:c1",
+          "agentic-patterns:p47:c0",
+          "agentic-patterns:p28:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r044",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p26:c1",
+          "agentic-patterns:p27:c0",
+          "agentic-patterns:p30:c0",
+          "agentic-patterns:p1:c0",
+          "agentic-patterns:p2:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r045",
+      "suite": "retrieval-hybrid",
+      "category": "factual",
+      "split": "heldout",
+      "scores": {
+        "mrr": 0.3333333333333333,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.3065735963827292
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p27:c2",
+          "agentic-patterns:p3:c2",
+          "agentic-patterns:p28:c0",
+          "agentic-patterns:p29:c0",
+          "agentic-patterns:p3:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r046",
+      "suite": "retrieval-hybrid",
+      "category": "procedure",
+      "split": "heldout",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p41:c1",
+          "eval-guide:p23:c1",
+          "agentic-patterns:p46:c0",
+          "agentic-patterns:p32:c2",
+          "agentic-patterns:p46:c2"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r047",
+      "suite": "retrieval-hybrid",
+      "category": "multi_hop",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 0.5,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "eval-guide:p24:c0",
+          "agentic-patterns:p38:c0",
+          "eval-guide:p23:c0",
+          "agentic-patterns:p36:c0",
+          "eval-guide:p39:c0"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r048",
+      "suite": "retrieval-hybrid",
+      "category": "multi_hop",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 0.5,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 1.0
+      },
+      "passed": true,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p37:c1",
+          "eval-guide:p17:c0",
+          "eval-guide:p15:c0",
+          "eval-guide:p14:c0",
+          "eval-guide:p38:c1"
+        ],
+        "fail": ""
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r049",
+      "suite": "retrieval-hybrid",
+      "category": "multi_hop",
+      "split": "dev",
+      "scores": {
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 0.5,
+        "hit@3": 1.0,
+        "recall@3": 0.5,
+        "hit@5": 1.0,
+        "recall@5": 0.5,
+        "hit@10": 1.0,
+        "recall@10": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6131471927654584
+      },
+      "passed": false,
+      "details": {
+        "retrieved": [
+          "agentic-patterns:p38:c1",
+          "eval-guide:p35:c0",
+          "eval-guide:p2:c2",
+          "eval-guide:p31:c0",
+          "eval-guide:p38:c1"
+        ],
+        "fail": "evidence not in top 5"
+      },
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    }
+  ]
+}

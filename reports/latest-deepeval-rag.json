@@ -1,0 +1,42 @@
+{
+  "suite": "deepeval-rag",
+  "dataset_version": "v1",
+  "created_at": "2026-10-28T20:20:39+00:00",
+  "config": {
+    "split": "dev",
+    "judge": "judge",
+    "threshold": 0.7
+  },
+  "n": 1,
+  "metrics": {
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1430 (char 1429)",
+      "trace_id": null
+    }
+  ]
+}

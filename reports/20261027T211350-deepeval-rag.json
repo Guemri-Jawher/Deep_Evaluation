@@ -1,0 +1,198 @@
+{
+  "suite": "deepeval-rag",
+  "dataset_version": "v1",
+  "created_at": "2026-10-27T21:13:50+00:00",
+  "config": {
+    "split": "dev",
+    "judge": "judge",
+    "threshold": 0.7
+  },
+  "n": 5,
+  "metrics": {
+    "de_answer_relevancy": {
+      "name": "de_answer_relevancy",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 2
+    },
+    "de_contextual_precision": {
+      "name": "de_contextual_precision",
+      "mean": 0.5,
+      "ci_low": 0.0,
+      "ci_high": 1.0,
+      "n": 2
+    },
+    "de_contextual_recall": {
+      "name": "de_contextual_recall",
+      "mean": 0.5,
+      "ci_low": 0.0,
+      "ci_high": 1.0,
+      "n": 2
+    },
+    "de_contextual_relevancy": {
+      "name": "de_contextual_relevancy",
+      "mean": 0.038461538461538464,
+      "ci_low": 0.0,
+      "ci_high": 0.07692307692307693,
+      "n": 2
+    },
+    "de_correctness": {
+      "name": "de_correctness",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 2
+    },
+    "de_faithfulness": {
+      "name": "de_faithfulness",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 2
+    },
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 0.6,
+      "ci_low": 0.2,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 5
+    },
+    "latency_p50_s": {
+      "name": "latency_p50_s",
+      "mean": 131.40423154999735,
+      "ci_low": 131.40423154999735,
+      "ci_high": 131.40423154999735,
+      "n": 2
+    },
+    "latency_p95_s": {
+      "name": "latency_p95_s",
+      "mean": 169.74755061499891,
+      "ci_low": 169.74755061499891,
+      "ci_high": 169.74755061499891,
+      "n": 2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "deepeval-rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "de_faithfulness": 0.0,
+        "de_answer_relevancy": 0.0,
+        "de_contextual_relevancy": 0.0,
+        "de_contextual_precision": 0.0,
+        "de_contextual_recall": 0.0,
+        "de_correctness": 0.0
+      },
+      "passed": false,
+      "details": {
+        "answer": "The guides do not cover this.",
+        "failed_metrics": [
+          "faithfulness",
+          "answer_relevancy",
+          "contextual_relevancy",
+          "contextual_precision",
+          "contextual_recall",
+          "correctness"
+        ],
+        "reasons": {
+          "faithfulness": "The score is 0.00 because the actual output appears to be completely missing or empty, failing to address any of the extensive retrieval context covering eval gate implementation, feedback flywheel architecture, premium role responsibilities, specialist agent patterns, human-in-the-loop interrupts, critic reviews, output guardrails, tracing and scoring, production checklists, core agent loop patterns, agent vs workflow selection criteria, pre-build questions, and common failure modes with fixes.",
+          "answer_relevancy": "The score is 0.00 because the actual output fails to provide the four steps of the eval-driven development loop, instead only stating that the guides do not cover this information.",
+          "contextual_relevancy": "The score is 0.00 because the retrieval context contains no information about the four steps of the eval-driven development loop. All retrieved statements discuss unrelated topics such as CI/CD integration ('The Eval Gate'), versioning practices, feedback flywheel concepts, agentic RAG implementations, ReAct loops, human-in-the-loop interrupts, output guardrails, tracing and scoring practices, production checklists, agent design principles, workflow vs agent patterns, failure modes, and foundational concepts—none of which enumerate the requested four steps.",
+          "contextual_precision": "The score is 0.00 because none of the retrieved nodes are relevant to the input. The first node discusses CI/CD pipelines and eval gates but does not mention the four specific steps of the eval-driven development loop. The second node describes agentic RAG patterns and production checklists but does not define the four steps. The third node explains ReAct loops and agent vs workflow decisions but does not outline the four steps. The fourth node lists failure modes and fixes for agentic systems but does not describe the four steps. The fifth node continues the discussion on agent patterns and human-in-the-loop gates but does not provide the four steps. Since all nodes are irrelevant, there are no relevant nodes to rank higher, resulting in a contextual precision score of 0.00.",
+          "contextual_recall": "The score is 0.00 because the expected output describes a generic four-step baseline-change-measure-decide evaluation loop, but none of the nodes in retrieval context mention this framework; the nodes instead cover specific LLM/AI patterns such as eval gates in CI/CD, feedback flywheels with production traces, agentic RAG with human-in-the-loop, ReAct loops with tracing and eval gates, agent vs workflow decision ladders, and failure modes/fixes.",
+          "correctness": "The Actual Output states that the guides do not cover the four steps of the eval-driven development loop, while the Expected Output clearly lists all four steps: baseline, change, measure, and decide. The Actual Output fails to include any of these key facts and instead claims the information is not covered, which directly contradicts the Expected Output. This constitutes a complete omission of all required key facts."
+        }
+      },
+      "latency_s": 174.00791939999908,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r002",
+      "suite": "deepeval-rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "de_faithfulness": 0.0,
+        "de_answer_relevancy": 0.0,
+        "de_contextual_relevancy": 0.07692307692307693,
+        "de_contextual_precision": 1.0,
+        "de_contextual_recall": 1.0,
+        "de_correctness": 0.0
+      },
+      "passed": false,
+      "details": {
+        "answer": "The guides do not cover this.",
+        "failed_metrics": [
+          "faithfulness",
+          "answer_relevancy",
+          "contextual_relevancy",
+          "correctness"
+        ],
+        "reasons": {
+          "faithfulness": "The score is 0.00 because the actual output claims 'The guides do not cover this,' which is directly contradicted by the retrieval context that extensively covers evaluation processes, stacks, tools, maturity levels, and job roles related to LLM evaluation and LLMops.",
+          "answer_relevancy": "The score is 0.00 because the response 'The guides do not cover this' fails to address the question about the three axes of evaluation, instead only commenting on the absence of information in guides without providing any relevant answer.",
+          "contextual_relevancy": "The score is 0.08 because the retrieval context is overwhelmingly irrelevant, containing extensive information about evaluation loops, LLMOps stacks, reflection patterns, maturity ladders, and hiring contexts that have nothing to do with the input's specific question about 'the three axes every evaluation sits on.' Only a single sentence — 'Any evaluation design sits on three axes, and naming them prevents building the wrong evaluation.' — directly addresses the query, but it merely states the existence of three axes without naming or describing them, rendering the context functionally useless for answering the question.",
+          "contextual_precision": "The score is 1.00 because the first node in the retrieval contexts perfectly answers the input by explicitly stating 'The three axes of every evaluation' and listing them as 'Timing (offline vs online), reference (reference-based vs reference-free) and grader (human vs automated).' All subsequent nodes (ranks 2 through 5) are irrelevant as they discuss unrelated topics such as the six layers of an evaluation stack, reflection loops, the evaluation maturity ladder, and the evaluation stack concept, none of which define the three axes of evaluation. The relevant node is correctly ranked at the very top, with all irrelevant nodes following after it.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully and directly supported by the 1st node in retrieval context, which explicitly lists the three evaluation axes: Timing (offline vs online), reference (reference-based vs reference-free), and grader (human vs automated). Perfect alignment!",
+          "correctness": "The Actual Output states 'The guides do not cover this,' which directly contradicts the Expected Output that clearly identifies three specific axes: Timing (offline vs online), reference (reference-based vs reference-free), and grader (human vs automated). All three key facts from the Expected Output are completely missing from the Actual Output, and the response incorrectly claims the information is not covered."
+        }
+      },
+      "latency_s": 88.80054369999561,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r003",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1793145600000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r004",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1793145600000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    },
+    {
+      "case_id": "r005",
+      "suite": "deepeval-rag",
+      "category": "",
+      "split": "dev",
+      "scores": {},
+      "passed": false,
+      "details": {},
+      "latency_s": 0.0,
+      "tokens": 0,
+      "error": "OpenAIRateLimitError: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1793145600000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3DJveoQvnZ4wuW8PoClGU3NYFYM'}",
+      "trace_id": null
+    }
+  ]
+}
