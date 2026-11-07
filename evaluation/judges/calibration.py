@@ -3,6 +3,11 @@
 * `calibrate` measures agreement with human labels (exact, within-1, quadratic kappa, Spearman,
   and binary pass/fail kappa) - the number to quote when you say "we trust this judge".
 * `probe_position_bias` and `probe_verbosity_bias` measure the two most common judge biases.
+
+Usage: pick one rubric at a time (a score of 4 means something different for each), build the
+judge with `make_judge(f"judge_{rubric}")` and pass `calibrate` a function that returns
+`judge.score(**label.inputs).score`. The pairwise probes need `make_judge("judge_pairwise")`.
+See doc.md in this folder.
 """
 
 from __future__ import annotations
@@ -19,6 +24,14 @@ ScoreFn = Callable[[JudgeLabel], int | None]
 
 @dataclass
 class CalibrationReport:
+    """Agreement between a judge and human scores on one set of labels.
+
+    `n` counts all labels and `parse_rate` the share the judge scored; every other field uses only
+    the scored ones. `exact` and `within_1` are shares of matching scores (equal, or at most 1
+    point apart). `weighted_kappa` and `spearman` measure agreement on the full 1-5 scale.
+    `pass_kappa` is Cohen's kappa on the pass/fail decision. `mean_bias` is judge minus human.
+    """
+
     n: int
     parse_rate: float
     exact: float
@@ -75,7 +88,12 @@ def calibrate(labels: Sequence[JudgeLabel], score_fn: ScoreFn) -> CalibrationRep
 
 
 def probe_position_bias(judge: LLMJudge, probes: Sequence[PairwiseProbe]) -> dict[str, float]:
-    """Judge each pair in both orders. Without position bias the verdict flips consistently."""
+    """Judge each pair in both orders. Without position bias the verdict flips consistently.
+
+    Returns `position_consistency` (share of pairs where the same answer wins in both orders; a
+    tie in both counts as consistent) and `first_position_win_rate` (0.5 means no preference for
+    the first slot). It does not measure accuracy: a judge that always says "tie" is consistent.
+    """
     consistent = 0
     first_wins = 0
     total = 0
@@ -102,7 +120,12 @@ def probe_position_bias(judge: LLMJudge, probes: Sequence[PairwiseProbe]) -> dic
 
 
 def probe_verbosity_bias(judge: LLMJudge, probes: Sequence[PairwiseProbe]) -> dict[str, float]:
-    """On 'verbosity' probes the concise answer is correct and the long one is padded or wrong."""
+    """On 'verbosity' probes the concise answer is correct and the long one is padded or wrong.
+
+    Returns `prefers_concise_correct` (share of probes where the concise answer wins in both
+    orders) and `n`. An inconsistent verdict counts as a loss, so it is not separated from a real
+    preference for the long answer.
+    """
     wins = 0
     total = 0
     for p in (p for p in probes if p.kind == "verbosity"):

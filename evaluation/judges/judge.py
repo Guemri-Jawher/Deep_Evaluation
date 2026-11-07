@@ -151,6 +151,7 @@ class LLMJudge:
 
 
 def disk_cache() -> _DiskCache:
+    """The shared on-disk cache of judge replies (`data/cache/judge_cache.jsonl`)."""
     return _DiskCache(CACHE_PATH)
 
 
