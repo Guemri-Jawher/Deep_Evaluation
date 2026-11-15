@@ -59,7 +59,21 @@ class RagPipeline:
         self.strategy, self.prompt_label = strategy, prompt_label
 
     def answer(self, question: str) -> RagResult:
-        """Answer a question using the RAG pipeline, returning the result with citations."""
+        """
+        Answer a question using the RAG pipeline, returning the result with citations.
+
+        Answer the given question using retrieved context and return a RagResult.
+        The returned RagResult contains the original question, the generated answer,
+        the list of retrieved chunks, the list of cited chunk IDs, and the prompt used.
+
+        If the answer indicates abstention, the `abstained` property of the RagResult will be True.
+
+        Args:
+            question: The question to be answered.
+
+        Returns:
+            A RagResult containing the answer and related information.
+        """
         retrieved = self.retriever.retrieve(question, k=self.k, strategy=self.strategy)
         prompt = get_prompt("rag_answer", label=self.prompt_label)
         text = prompt.compile(context=format_context(retrieved), question=question)

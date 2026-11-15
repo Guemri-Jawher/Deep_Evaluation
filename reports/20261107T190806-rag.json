@@ -1,0 +1,381 @@
+{
+  "suite": "rag",
+  "dataset_version": "v1",
+  "created_at": "2026-11-07T19:08:06+00:00",
+  "config": {
+    "strategy": "hybrid",
+    "k": 5,
+    "judges": true,
+    "split": "dev"
+  },
+  "n": 5,
+  "metrics": {
+    "answer_relevance": {
+      "name": "answer_relevance",
+      "mean": 0.85,
+      "ci_low": 0.55,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "citation_validity": {
+      "name": "citation_validity",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "context_relevance": {
+      "name": "context_relevance",
+      "mean": 0.85,
+      "ci_low": 0.55,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "correctness": {
+      "name": "correctness",
+      "mean": 0.65,
+      "ci_low": 0.29875000000000007,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "error_rate": {
+      "name": "error_rate",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 5
+    },
+    "faithfulness": {
+      "name": "faithfulness",
+      "mean": 0.9,
+      "ci_low": 0.7,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "has_citation": {
+      "name": "has_citation",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "hit@1": {
+      "name": "hit@1",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "hit@3": {
+      "name": "hit@3",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "hit@5": {
+      "name": "hit@5",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "mrr": {
+      "name": "mrr",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "ndcg@5": {
+      "name": "ndcg@5",
+      "mean": 0.7226294385530917,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "pass_rate": {
+      "name": "pass_rate",
+      "mean": 0.6,
+      "ci_low": 0.2,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "precision@5": {
+      "name": "precision@5",
+      "mean": 0.16,
+      "ci_low": 0.08,
+      "ci_high": 0.2,
+      "n": 5
+    },
+    "recall@1": {
+      "name": "recall@1",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "recall@3": {
+      "name": "recall@3",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "recall@5": {
+      "name": "recall@5",
+      "mean": 0.8,
+      "ci_low": 0.4,
+      "ci_high": 1.0,
+      "n": 5
+    },
+    "token_f1": {
+      "name": "token_f1",
+      "mean": 0.3653975903614458,
+      "ci_low": 0.12,
+      "ci_high": 0.6065598866052444,
+      "n": 5
+    },
+    "latency_p50_s": {
+      "name": "latency_p50_s",
+      "mean": 6.311472300003516,
+      "ci_low": 6.311472300003516,
+      "ci_high": 6.311472300003516,
+      "n": 5
+    },
+    "latency_p95_s": {
+      "name": "latency_p95_s",
+      "mean": 8.045963859994663,
+      "ci_low": 8.045963859994663,
+      "ci_high": 8.045963859994663,
+      "n": 5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "r001",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.07058823529411765,
+        "mrr": 0.0,
+        "hit@1": 0.0,
+        "recall@1": 0.0,
+        "hit@3": 0.0,
+        "recall@3": 0.0,
+        "hit@5": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_relevance": 0.25,
+        "correctness": 0.0
+      },
+      "passed": false,
+      "details": {
+        "answer": "Production traces surface real failures [eval-guide:p33:c0], those failures become new cases in your eval set [eval-guide:p33:c0], the eval set grows more representative of reality [eval-guide:p33:c0], and the eval gate catches more regressions [eval-guide:p33:c0]",
+        "retrieved": [
+          "eval-guide:p33:c0",
+          "agentic-patterns:p45:c0",
+          "agentic-patterns:p7:c1",
+          "agentic-patterns:p46:c0",
+          "agentic-patterns:p7:c2"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "Every factual claim in the answer is directly supported by the context provided in [eval-guide:p33:c0]. The context describes how production traces surface failures, how those failures update the eval set, how the eval set becomes more representative, and how the eval gate catches more regressions.",
+        "answer_relevance_reason": "The question asks for the four steps of the eval-driven development loop, and the answer clearly lists four distinct, sequential stages of this loop. It directly addresses every part of the prompt without unnecessary padding.",
+        "context_relevance_reason": "The question asks for the four steps of the eval-driven development loop, but the provided context describes the concept of the feedback flywheel and the role of the eval gate without explicitly listing four distinct steps. The context mentions production traces leading to new eval cases, the eval s",
+        "correctness_reason": "The reference describes four specific steps of the eval-driven development loop: Baseline, Change, Measure, and Decide. The answer describes how the evaluation set evolves using production traces, which is a related concept but does not list the four required development loop steps. Therefore, the a",
+        "failure": "retrieval: evidence missing from top-5 (fix chunking, embeddings or retriever)"
+      },
+      "latency_s": 6.8156993000011425,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r002",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.0,
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6131471927654584,
+        "faithfulness": 0.5,
+        "answer_relevance": 0.25,
+        "context_relevance": 1.0,
+        "correctness": 0.25
+      },
+      "passed": false,
+      "details": {
+        "answer": "The three axes of every evaluation are mentioned in [eval-guide:p6:c1].",
+        "retrieved": [
+          "eval-guide:p6:c1",
+          "eval-guide:p35:c0",
+          "agentic-patterns:p15:c2",
+          "eval-guide:p9:c1",
+          "eval-guide:p34:c0"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "The context mentions \"The three axes of every evaluation\" in [eval-guide:p6:c1], but it does not list what those three axes are. Therefore, the claim that they are mentioned in that specific section is partially supported, but the answer implies the content is present when it is not fully detailed.",
+        "answer_relevance_reason": "The question asks for the three axes, but the answer only provides a citation to a guide instead of listing the axes. It fails to provide the requested information directly. Therefore, it does not fully address the question.",
+        "context_relevance_reason": "The question asks for the three axes every evaluation sits on. The context passage [eval-guide:p6:c1] explicitly states, \"The three axes of every evaluation\" and mentions that any eval sits on these three axes, providing the necessary information. The other passages discuss evaluation stacks, maturi",
+        "correctness_reason": "The reference explicitly lists the three axes as Timing, reference, and grader. The answer merely cites a source without stating the actual axes. Therefore, the key information is missing.",
+        "failure": "generation: answer not grounded in good context (fix the prompt)"
+      },
+      "latency_s": 3.7705238000198733,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r003",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.48000000000000004,
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_relevance": 1.0,
+        "correctness": 1.0
+      },
+      "passed": true,
+      "details": {
+        "answer": "A good golden set covers the happy path [eval-guide:p7:c1], the long tail [eval-guide:p7:c1], known failure cases [eval-guide:p7:c1], and adversarial cases [eval-guide:p7:c1].",
+        "retrieved": [
+          "eval-guide:p7:c1",
+          "eval-guide:p7:c0",
+          "eval-guide:p36:c1",
+          "eval-guide:p38:c0",
+          "eval-guide:p27:c1"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "The answer lists four components covered by a good golden set, and the context explicitly lists these four items under the heading \"What a good golden set covers\" in [eval-guide:p7:c1]. All claims are directly supported by the provided context.",
+        "answer_relevance_reason": "The question asks what a good golden set should cover. The answer lists four specific and relevant components: happy path, long tail, known failure cases, and adversarial cases. It fully addresses the prompt concisely.",
+        "context_relevance_reason": "The context provides a comprehensive list of what a good golden set should cover, including happy paths, long tail cases, known failures, and adversarial cases. Multiple passages reinforce that the set should be representative of real tasks and grow from production failures. The information is highl",
+        "correctness_reason": "The answer correctly lists all the key components mentioned in the reference: the happy path, the long tail, known failure cases, and adversarial cases. All key facts are present and the meaning matches the reference exactly. Therefore, the score is 5.",
+        "failure": ""
+      },
+      "latency_s": 8.353529999993043,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r004",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.5294117647058824,
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_relevance": 1.0,
+        "correctness": 1.0
+      },
+      "passed": true,
+      "details": {
+        "answer": "Task metrics [eval-guide:p8:c0], Quality metrics [eval-guide:p8:c0], Safety metrics [eval-guide:p8:c0], and Operational metrics [eval-guide:p8:c0]",
+        "retrieved": [
+          "eval-guide:p8:c0",
+          "eval-guide:p20:c0",
+          "agentic-patterns:p26:c1",
+          "eval-guide:p24:c0",
+          "agentic-patterns:p13:c2"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "All factual claims in the answer are directly supported by the context, specifically in the section [eval-guide:p8:c0] which defines these four metric families. The context provides definitions and examples for each listed metric type.",
+        "answer_relevance_reason": "The question asks for the four families of the metric taxonomy, and the answer provides exactly these four families. It is concise and directly answers the prompt without any extraneous information.",
+        "context_relevance_reason": "The question asks for the four families of the metric taxonomy. The first context passage explicitly lists and describes these four families: Task, Quality, Safety, and Operational metrics. The other passages discuss different metrics or memory types but do not list the required four families. There",
+        "correctness_reason": "The reference lists four specific families: task, quality, safety, and operational metrics. The answer correctly lists these four families, including the bracketed citations which do not change the core meaning. All key facts are present and correct.",
+        "failure": ""
+      },
+      "latency_s": 6.311472300003516,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    },
+    {
+      "case_id": "r005",
+      "suite": "rag",
+      "category": "factual",
+      "split": "dev",
+      "scores": {
+        "has_citation": 1.0,
+        "citation_validity": 1.0,
+        "token_f1": 0.7469879518072289,
+        "mrr": 1.0,
+        "hit@1": 1.0,
+        "recall@1": 1.0,
+        "hit@3": 1.0,
+        "recall@3": 1.0,
+        "hit@5": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "context_relevance": 1.0,
+        "correctness": 1.0
+      },
+      "passed": true,
+      "details": {
+        "answer": "Level 0 is eyeballing outputs [eval-guide:p9:c1], Level 1 is a fixed test set with metrics [eval-guide:p9:c1], Level 2 is automated evals running in ci on every change [eval-guide:p9:c1], and Level 3 is online evaluation and continuous monitoring in production [eval-guide:p9:c1].",
+        "retrieved": [
+          "eval-guide:p9:c1",
+          "eval-guide:p2:c2",
+          "eval-guide:p34:c0",
+          "eval-guide:p4:c0",
+          "eval-guide:p35:c0"
+        ],
+        "abstained": false,
+        "faithfulness_reason": "Each factual claim in the answer is directly supported by the context provided in [eval-guide:p9:c1]. The context explicitly defines Level 0 through Level 3 of the evaluation maturity ladder. Therefore, the answer is fully supported.",
+        "answer_relevance_reason": "The question asks for the levels of the evaluation maturity ladder, and the answer lists four distinct levels (0 through 3) with corresponding descriptions. It fully and accurately addresses every part of the prompt without including irrelevant information.",
+        "context_relevance_reason": "The context explicitly lists the four levels of the evaluation maturity ladder (Level 0 through Level 3) in passage [eval-guide:p9:c1]. This passage contains all the necessary information directly and with minimal noise. Therefore, the context is highly relevant.",
+        "correctness_reason": "The answer accurately lists all four levels of the evaluation maturity ladder as described in the reference. Each level and its corresponding description matches the ground truth. The inclusion of citations does not change the factual correctness of the content.",
+        "failure": ""
+      },
+      "latency_s": 5.810914799978491,
+      "tokens": 0,
+      "error": null,
+      "trace_id": null
+    }
+  ]
+}

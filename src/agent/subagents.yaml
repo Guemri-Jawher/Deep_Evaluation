@@ -1,0 +1,24 @@
+# Subagents of the supervisor, loaded and validated by subagent_config.py.
+#   description  read by the supervisor to decide when to delegate (it works like a prompt)
+#   prompt       name of the system prompt in the prompt registry
+#   tools        tool names from build_tools()
+#   model        role of the chat model: "agent" or "subagent"
+#   skills       virtual skill folders mounted under /skills/
+
+researcher:
+  description: >-
+    Evidence gatherer. Give it a self-contained brief (what facts are needed, which guide).
+    It runs several retrievals and returns quoted evidence with chunk ids, never conclusions.
+  prompt: researcher_system
+  tools: [search_docs]
+  model: subagent
+  skills: [/skills/researcher/]
+
+grounding-critic:
+  description: >-
+    Adversarial checker. Give it the draft answer; it verifies every claim and citation
+    against the guides and returns verdict: pass|fail with specific issues.
+  prompt: critic_system
+  tools: [search_docs]
+  model: subagent
+  skills: [/skills/critic/]
