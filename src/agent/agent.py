@@ -24,7 +24,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 
 from agent.subagent_config import build_subagents, load_specs
 
-# from assistant.guardrails import ToolPolicyMiddleware
+from guardrails.middleware import ToolPolicyMiddleware
 from prompts.registry import PromptHandle, get_prompt
 from rag.retriever import Retriever, get_retriever
 from tools.notes import DESTRUCTIVE_TOOLS
@@ -92,11 +92,11 @@ def build_agent(
     middleware: list[Any] = [
         ModelCallLimitMiddleware(run_limit=s.max_steps, exit_behavior="end"),
         ToolCallLimitMiddleware(run_limit=s.max_tool_calls, exit_behavior="continue"),
-        # ToolPolicyMiddleware(
-        #     allowed_tools=by_name.keys(),
-        #     repeat_limit=s.repeat_tool_call_limit,
-        #     max_output_chars=s.max_tool_output_chars,
-        # ),
+        ToolPolicyMiddleware(
+            allowed_tools=by_name.keys(),
+            repeat_limit=s.repeat_tool_call_limit,
+            max_output_chars=s.max_tool_output_chars,
+        ),
     ]
     graph = create_deep_agent(
         model=model,
