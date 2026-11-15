@@ -1,4 +1,5 @@
-"""Subagent definitions: read from subagents.yaml, validated, then turned into deepagents `SubAgent`s.
+"""
+Subagent definitions: read from subagents.yaml, validated, then turned into deepagents `SubAgent`s.
 
 The YAML holds only plain data. Tools and models are Python objects, so the file refers to them by
 name (`tools: [search_docs]`, `model: subagent`) and `build_subagents` resolves them. An unknown
